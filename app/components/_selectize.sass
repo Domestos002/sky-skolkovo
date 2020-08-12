@@ -1,0 +1,74 @@
+.is-hidden
+  display: none
+
+.selectize
+  position: relative
+  &--var1
+    width: 100%
+    .selectize__list--single, .selectize__list--dropdown
+      color: $text-primary
+      background-color: #f3d0cd
+    .selectize__list--dropdown
+      border-radius: 0
+      margin-top: 2px
+    &:hover
+      .selectize__list--single, .selectize__list--dropdown
+        background-color: #f4eae9
+    &:disabled
+      cursor: not-allowed
+      .selectize__list--single, .selectize__list--dropdown
+        color: #989aab
+  &--var2
+    width: 100%
+    .selectize__list--single, .selectize__list--dropdown
+      color: $text-primary
+      background-color: #f0f1f3
+    .selectize__list--dropdown
+      border-radius: 0
+      margin-top: 2px
+    &:hover
+      .selectize__list--single, .selectize__list--dropdown
+      background-color: #f0f1f3
+    &:disabled
+      cursor: not-allowed
+      .selectize__list--single, .selectize__list--dropdown
+        color: #989aab
+
+  &__list--single
+    line-height: 50px
+    user-select: none
+    padding: 0 20px
+    position: relative
+    cursor: pointer
+    +respond-to(sm)
+      font-size: 14px
+    &:before
+      top: 50%
+      border: solid transparent
+      content: ''
+      border-top-color: $text-primary
+      position: absolute
+      margin: -0.125em 0.5em 0 0
+      border-width: 8px 4px 0
+      right: 10px
+
+  &__item
+    padding: 0 20px
+    cursor: pointer
+    user-select: none
+    line-height: 40px
+    &:hover
+      color: $brand
+    &.selectize__item--active
+      color: $brand
+  &__list--dropdown
+    position: absolute
+    width: 100%
+    z-index: 2
+    top: 100%
+    max-height: 200px
+    overflow: auto
+    left: 0
+    display: none
+    &.is-active
+      display: block

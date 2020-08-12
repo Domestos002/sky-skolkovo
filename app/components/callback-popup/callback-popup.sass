@@ -1,0 +1,168 @@
+.callback-popup
+  position: relative
+  z-index: 500
+  &--active
+    +min-respond-to(md)
+      .callback-popup
+        &__window
+          transform: translateX(-415px)
+    +respond-to(md)
+      .callback-popup__window
+        display: block
+  &__sub, &__heading
+    @extend %font-base
+    font-size: 20px
+  &__overlay
+    position: fixed
+    z-index: 100
+    display: none
+    overflow-y: auto
+    margin: 0
+    padding: 0
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0,0,0,0.5)
+  &__window
+    position: fixed
+    z-index: 100
+    top: 0
+    height: 100%
+    bottom: 0
+    right: -415px
+    width: 100%
+    max-width: 415px
+    overflow-x: hidden
+    transition: transform 0.2s ease 0s
+    background-color: #fff
+    display: flex
+    font-size: 14px
+    +respond-to(md)
+      width: auto
+      padding: 10px 20px
+      top: initial
+      right: 10px
+      left: 10px
+      max-width: 100%
+      border-radius: 0
+      max-height: 430px
+      min-height: 410px
+      display: none
+  &__window-inner
+    position: relative
+    width: 100%
+    max-width: 280px
+    margin-left: auto
+    margin-right: auto
+    height: 100%
+    min-height: 630px
+    box-sizing: border-box
+    +respond-to(md)
+      max-width: 100%
+      min-height: auto
+
+  &__window-close
+    display: flex
+    -ms-flex-align: end
+    align-items: flex-end
+    position: absolute
+    top: 14px
+    right: 12px
+    z-index: 200
+    text-decoration: none
+  &__close-text
+    line-height: 20px
+    height: 20px
+    color: #8e929b
+    font-size: 16px
+    font-weight: 400
+    margin-right: 7px
+    display: inline-block
+    vertical-align: middle
+  &__form
+    position: absolute
+    top: 45%
+    width: 100%
+    z-index: 220
+    max-width: 280px
+    transform: translateY(-50%)
+    +respond-to(md)
+      width: 100%
+      margin: 0
+      max-width: 480px
+      padding-top: 15px
+      transform: translate(-50%,-50%)
+      left: 50%
+  &__logo
+    display: block
+    margin-top: 5px
+    margin-bottom: 5px
+    background-image: url("../images/svg-icons/logo-blue.svg")
+    width: 60px
+    height: 70px
+    background-repeat: no-repeat
+    background-position: center
+    -webkit-background-size: cover
+    background-size: cover
+  &__form-field
+    &:not(:first-child)
+      margin-top: 20px
+    input
+      outline: 0
+      box-sizing: border-box
+      width: 100%
+      border-radius: 5px
+      height: 50px
+      padding: 0 20px
+      font-size: 16px
+      border: 2px solid #c2c6cb
+      font-weight: 400
+  &__form-fieldset
+    +respond-to(md)
+      text-align: center
+  &__personal-data
+    color: #999da5
+    font-size: 18px
+    position: absolute
+    bottom: 20px
+    width: 100%
+    box-sizing: border-box
+    line-height: 15px
+    @extend %font-base
+    +respond-to(md)
+      text-align: center
+      font-size: 16px
+  &__submit-btn
+    display: block
+    width: 100%
+
+
+
+@media only screen and (max-width: 767px) and (orientation: landscape)
+  .callback-popup
+    &__form
+      padding-top: 0
+      position: static
+      -webkit-transform: none
+      -ms-transform: none
+      transform: none
+      margin: 15px auto
+    &__window
+      overflow: auto
+      min-height: auto
+      min-height: initial
+      top: 0
+      padding: 5px 20px 10px
+      bottom: 0
+      right: 0
+      left: 0
+    &__sub
+      display: none
+    &__personal-data
+      padding-left: 0
+      padding-right: 0
+      text-align: center
+      bottom: 0
+      padding-bottom: 5px
+      box-sizing: border-box

@@ -1,0 +1,118 @@
+.about__section-title, .about__txt, .about__masonry-item:not(.about__masonry-slider)
+  +respond-to(md)
+    padding-left: 20px
+    padding-right: 20px
+
+.about__section-subtx,  .gallery__section-subtxt
+  +respond-to(md)
+    padding-left: 20px
+    padding-right: 20px
+
+.about__masonry-card-img, .about__masonry-slider-item
+  line-height: 0
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.about
+  padding: 100px 0 100px 0
+  +respond-to(md)
+    padding: 50px 0 50px 0
+  &__inner.container
+    +respond-to(md)
+      padding-left: 0
+      padding-right: 0
+  &__masonry
+    display: flex
+    margin-top: 75px
+    flex-wrap: wrap
+  &__masonry-col
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    box-sizing: border-box
+    &:first-child
+      width: 70%
+      padding-right: 40px
+      +respond-to(dk)
+        padding-right: 0
+        width: 100%
+    &:last-child
+      width: 30%
+      +respond-to(dk)
+        flex-direction: row
+        width: 100%
+        margin-top: 45px
+        .about
+          &__masonry-card-img
+            height: 240px
+          &__masonry-item
+            width: 50%
+            &:first-child
+              padding-right: 40px
+              +respond-to(md)
+                display: none
+            &:last-child
+              padding-left: 20px
+              +respond-to(md)
+                width: 100%
+  &__masonry-txt
+    font-size: 18px
+    font-weight: 300
+    line-height: 30px
+    letter-spacing: 0.29px
+    margin-top: 30px
+    font-family: 'PFDinTextCondPro-Regular', Helvetica, Arial, sans-serif
+  &__masonry-title
+    color: #3e3c54
+    font-size: 35px
+    font-weight: 400
+    line-height: 35px
+    letter-spacing: 1.25px
+    text-transform: uppercase
+  &__masonry-slider-item
+    +respond-to(dk)
+      height: 510px
+    +respond-to(lg)
+      height: 360px
+    +respond-to(md)
+      height: 210px
+  &__masonry-card-img
+    height: 240px
+  &__masonry-item-wrap
+    display: flex
+    margin-top: 70px
+    +respond-to(md)
+      flex-wrap: wrap
+  &__masonry-card-caption
+    color: #3e3c54
+    height: 50px
+    text-transform: uppercase
+    margin-top: 12px
+    font-size: 25px
+    font-weight: 400
+    line-height: 25px
+    letter-spacing: 1.19px
+    +respond-to(dk)
+      height: auto
+      height: initial
+  &__masonry-item
+    +min-respond-to(md)
+      &:not(:last-child)
+        margin-right: 40px
+    &:not(:last-child)
+      margin-right: 40px
+    &--mobile
+      margin-top: 45px
+      display: none
+      +respond-to(md)
+        display: block
+    +respond-to(md)
+      width: 100%
+      &:not(:last-child)
+        margin-right: 0
+      &:not(:first-child)
+        margin-top: 45px
+    &.about__masonry-slider
+      max-height: 510px

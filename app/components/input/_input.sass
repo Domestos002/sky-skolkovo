@@ -1,0 +1,68 @@
+.input
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  line-height: initial
+  outline: none
+  box-shadow: none
+  width: 100%
+  &--line
+    position: relative
+    z-index: 5
+    background-color: transparent
+    height: 52px
+    line-height: initial
+    font-size: 18px
+    font-weight: 400
+    letter-spacing: 0.5px
+    border: none
+    border-bottom: 1px solid #9b9a9b
+    &.char
+      & + .input-block__txt
+        transform: scale(.80) translate3d(0, -33px, 0)
+
+    &:not([disabled]):focus + .input-block__txt
+        transform: scale(.80) translate3d(0, -33px, 0)
+
+textarea
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  width: 100%
+  resize: none
+  transition-property: border, background, color, box-shadow, padding
+  transition: all 0.2s linear
+  @extend %font-base
+  font-size: 15px
+  outline: 0
+  padding: 15px
+  background-color: #f0f1f3
+  border: 1px solid transparent
+  &:focus, &:active
+    outline: 0
+    box-shadow: 0 1px 4px rgba(209, 61, 115, 0.3)
+    border: 1px solid $brand
+  &:hover
+    box-shadow: 0 1px 4px rgba(209, 61, 115, 0.3)
+  &:disabled
+    .input-block__abs-label
+      color: #d2d2d2
+
+
+.input-block
+  position: relative
+  height: 52px
+  &__txt
+    font-family: 'PFDinTextCondPro-Regular', Helvetica, Arial, sans-serif
+    transform-origin: bottom left
+    width: 100%
+    user-select: none
+    transition: all .3s cubic-bezier(0.4,0,0.2,1)
+    transition-property: color,bottom,transform
+    position: absolute
+    bottom: 10px
+    left: 1px
+    color: #9b9b9b
+    font-size: 18px
+    font-weight: 400
+    letter-spacing: 0.5px

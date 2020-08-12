@@ -1,0 +1,30 @@
+.price
+  background-image: url("../images/apartments-bg.png"), linear-gradient(to top, #716e8c 0%, #3e3b53 100%)
+  padding: 70px 0 105px 0
+  position: relative
+  background-repeat: no-repeat
+  background-position: 75% center
+  &-title
+    color: #fff
+.price-cards
+  &__list
+    display: flex
+    flex-wrap: wrap
+    margin-left: -40px
+    margin-top: -40px
+    +respond-to(lg)
+      margin-left: -20px
+  &__col
+    width: 33.333333%
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    padding-left: 40px
+    padding-top: 40px
+    +respond-to(lg)
+      padding-left: 20px
+    +respond-to(md)
+      width: 100%
+      max-width: 455px
+      margin-left: auto
+      margin-right: auto

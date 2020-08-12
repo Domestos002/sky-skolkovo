@@ -1,0 +1,59 @@
+.tg
+  li, p
+    font-size: 18px
+    line-height: 30px
+    letter-spacing: 0.29px
+  ol
+    counter-reset: li
+    list-style: none
+    p
+      @extend %font-base
+    & > li
+      @extend %font-base-bold
+      font-size: 19px
+      & > p:first-child
+        margin-top: 30px
+      & > ol
+        font-size: 400px
+        & > p
+          @extend %font-base
+        & > li
+          font-size: 15px
+          @extend %font-base
+        & > li:first-child
+          margin-top: 20px
+      &:before
+        counter-increment: li
+        content: counters(li, ".") "."
+
+  ul
+    margin: 0
+    padding: 0
+    padding-left: 30px
+    text-indent: 0
+    list-style: disc outside
+  h3
+    font-size: 19px
+    @extend %font-base-bold
+  h3 + p
+    margin-top: 20px
+  li + li
+    margin-top: 30px
+  li > ul
+    margin-top: 30px
+  ul + li
+    margin-top: 20px
+  p + h3
+    margin-top: 30px
+  p + ol
+    margin-top: 30px
+  p + p
+    margin-top: 20px
+
+  +respond-to(md)
+    font-size: 16px
+
+
+
+
+

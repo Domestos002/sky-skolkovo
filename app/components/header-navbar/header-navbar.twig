@@ -1,0 +1,47 @@
+<div class="header-panel-mobile" id="header-panel-mobile">
+    <div class="header-panel-mobile__inner container">
+        <div class="header-panel-mobile__contain">
+            <div class="">
+                {% include "../../components/phone-callback/phone-callback.twig" with {"classes": "header-panel-mobile__phone-callback"} %}
+                <span class="btn btn--primary btn--medium header-panel-mobile__callback-btn js-callback-toggle">заказать звонок</span>
+            </div>
+            <div class="burger" id="burger">
+                <span class="burger__stripe"></span>
+                <span class="burger__stripe"></span>
+                <span class="burger__stripe"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header-navbar">
+    <div class="header-navbar-inner-rel">
+        <div class="header-navbar__inner container">
+            <nav class="header-navbar__nav" id="header-navbar__nav">
+                <div class="header-navbar__list">
+                    <div class="header-navbar__col header-navbar__col--first">
+                        <a href="#about" class="header-navbar__link js-scrollScreen">О проекте</a>
+                        <a href="#videotour" class="header-navbar__link js-scrollScreen">Видеотур</a>
+                        <a href="#gallery" class="header-navbar__link js-scrollScreen">Галерея</a>
+                        <a href="#credit" class="header-navbar__link js-scrollScreen">Акция</a>
+                    </div>
+                    <a href="/" class="header-navbar-label">
+                        <span class="logo header-navbar__logo"></span>
+                    </a>
+                    <div class="header-navbar__col header-navbar__col--last">
+                        <a href="#investors" class="header-navbar__link js-scrollScreen">Инвесторам</a>
+                        <a href="#banks" class="header-navbar__link js-scrollScreen">Как купить</a>
+                        <a href="#location" class="header-navbar__link js-scrollScreen">Расположение</a>
+                        <a href="#news" class="header-navbar__link js-scrollScreen">Новости</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="header-navbar__abs-callback">
+                {% include "../../components/phone-callback/phone-callback.twig" with {"classes": "header-navbar__phone-callback"} %}
+                <span class="btn btn--large btn--outline js-callback-toggle">Заказать звонок</span>
+            </div>
+            <span class="header-navbar-label header-navbar-label--mobile">
+                <span class="logo header-navbar__logo"></span>
+            </span>
+        </div>
+    </div>
+</div>

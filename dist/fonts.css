@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "PFDinTextCompProRegular";
+  src: url("fonts/PFDinTextCompProRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PFDinTextCondPro-Regular";
+  src: url("fonts/PFDinTextCondPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PFDinTextCompPro-Thin";
+  src: url("fonts/PFDinTextCompPro-Thin.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJmb250cy5jc3MiXSwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZXtmb250LWZhbWlseTpcIlBGRGluVGV4dENvbXBQcm9SZWd1bGFyXCI7c3JjOnVybChcIi4uL2ZvbnRzL1BGRGluVGV4dENvbXBQcm9SZWd1bGFyLndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zdHlsZTpub3JtYWx9QGZvbnQtZmFjZXtmb250LWZhbWlseTpcIlBGRGluVGV4dENvbmRQcm8tUmVndWxhclwiO3NyYzp1cmwoXCIuLi9mb250cy9QRkRpblRleHRDb25kUHJvLVJlZ3VsYXIud29mZlwiKSBmb3JtYXQoXCJ3b2ZmXCIpO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXN0eWxlOm5vcm1hbH1AZm9udC1mYWNle2ZvbnQtZmFtaWx5OlwiUEZEaW5UZXh0Q29tcFByby1UaGluXCI7c3JjOnVybChcIi4uL2ZvbnRzL1BGRGluVGV4dENvbXBQcm8tVGhpbi53b2ZmXCIpIGZvcm1hdChcIndvZmZcIik7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc3R5bGU6bm9ybWFsfVxuIl0sImZpbGUiOiJmb250cy5jc3MifQ== */

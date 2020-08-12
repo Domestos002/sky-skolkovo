@@ -1,0 +1,39 @@
+<div class="callback-popup" id="callback-popup">
+    <div class="callback-popup__overlay" id="callback-popup-overlay"></div>
+    <div class="callback-popup__window">
+        <a href="javascript:" class="callback-popup__window-close" id="callback-popup-close">
+            <p class="callback-popup__close-text">Закрыть</p>
+            <svg class="callback-popup__window_close_icon" width="17px" height="17px">
+                <g stroke-width="2" stroke="#ccc">
+                    <path d="M1,1 L16,16"></path>
+                    <path d="M16,1 L1,16"></path>
+                </g>
+            </svg>
+        </a>
+        <div class="callback-popup__window-inner">
+            <form class="callback-popup__form">
+                <fieldset class="callback-popup__form-fieldset callback-popup__form-fieldset-active">
+                    <div class="callback-popup__heading"><p>Нужна консультация?</p>
+                    </div>
+                    <p class="callback-popup__sub">Оставьте телефон, и мы вам перезвоним</p>
+                    <div class="callback-popup__form-field">
+                        <input name="phone" class="js-phone-mask" placeholder="+7 (___) ___-__-__" autocomplete="off"
+                               type="tel">
+                    </div>
+                    <div class="callback-popup__form-field">
+                        <input name="name" placeholder="Имя" type="text">
+                    </div>
+                    <div class="callback-popup__form-field">
+                        <button class="btn btn--primary btn--large callback-popup__submit-btn"
+                                type="submit">
+                            <span class="default">Позвоните мне!</span>
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+            <p class="callback-popup__form-field callback-popup__personal-data">Нажимая кнопку «Позвоните мне», вы
+                подтверждаете свое согласие с <a class="link" href="//help.gdeetotdom.ru/156-politika-konfidentsialnosti/"
+                                                 target="_blank">Политикой конфиденциальности</a></p>
+        </div>
+    </div>
+</div>

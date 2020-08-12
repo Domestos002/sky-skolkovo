@@ -1,0 +1,25 @@
+.banks
+  padding: 100px 0 100px 0
+  +respond-to(md)
+    padding: 50px 0 20px 0
+  &__btns
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 20px
+    .btn--second
+      border: 1px solid $text-primary
+      padding: 0 29px
+      &:hover
+        border-color: $brand2
+    .btn:not(last-child)
+      margin-bottom: 15px
+
+.table.banks__table
+  font-family: 'PFDinTextCondPro-Regular', Helvetica, Arial, sans-serif
+  +respond-to(md)
+    .table-cell:last-child
+      display: none
+  +respond-to(sm)
+    .table-cell:nth-child(3)
+      display: none

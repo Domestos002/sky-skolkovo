@@ -1,0 +1,95 @@
+.uk-modal-dialog.modal.modal-callback
+  width: 100%
+  max-width: 500px
+  background-image: url(../images/linear-layer-black.png)
+  background-repeat: no-repeat
+  background-position: top
+  background-size: auto 30px
+  padding-top: 64px
+  position: relative
+  padding-bottom: 44px
+
+.modal__form, .modal__title
+  margin-left: auto
+  width: 100%
+  max-width: 320px
+  margin-right: auto
+
+.modal-callback
+  &__policy-link
+    color: #989aab
+    +trans()
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  &__form-notice
+    margin-top: 37px
+    font-size: 14px
+    text-align: center
+    color: #989aab
+    line-height: 20px
+
+.uk-modal-dialog.modal.modal-politic
+  width: 100%
+  max-width: 760px
+  padding: 0
+
+.modal__title.modal-politic__title
+  padding: 40px
+  border-bottom: 1px solid #d8d8d8
+  margin-left: 0
+  max-width: initial
+  margin-right: 0
+  width: 100%
+  +respond-to(md)
+    padding: 30px 40px 30px 20px
+
+.modal-politic__contain
+  padding: 30px 40px 20px 40px
+  overflow: auto
+  +respond-to(md)
+    padding: 30px 20px 20px 20px
+
+
+.modal-politic__close-btn-wrapper
+  padding: 30px 40px 20px 40px
+  background-color: #ffff
+  position: relative
+  z-index: 2
+  +respond-to(md)
+    padding: 30px 20px 20px 20px
+
+
+.modal
+  &__close-btn
+    position: absolute
+    right: -40px
+    top: 0
+    z-index: 10
+    width: 40px
+    height: 40px
+    background-image: url("../images/close.svg")
+    -webkit-background-size: 40px
+    background-size: 40px
+    background-repeat: no-repeat
+    +trans()
+    &:hover
+      background-image: url("../images/close-hover.svg")
+    +respond-to(lg)
+      right: 0
+  &__title
+    line-height: 1.2em
+    font-size: 26px
+    font-weight: 900
+    +respond-to(md)
+      font-size: 22px
+  &__form-submit
+    margin-top: 35px
+  &__form
+    margin-top: 80px
+    +respond-to(md)
+      margin-top: 30px
+
+.modal__form__form-block
+  &:not(:first-child)
+    margin-top: 16px

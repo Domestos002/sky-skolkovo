@@ -1,0 +1,113 @@
+.location
+  position: relative
+  z-index: 1
+  padding: 85px 0 110px 0
+  &__bg
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    display: flex
+  &__bg-col
+    &:first-child
+      background-image: url("../images/road.jpg")
+    &:last-child
+      background-image: url("../images/man.jpg")
+    width: 50%
+    background-repeat: no-repeat
+    -webkit-background-size: cover
+    background-size: cover
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+      background-image: linear-gradient(to top, rgba(80, 75, 149, 0.7) 0%, $brand 100%)
+  &__inner
+    position: relative
+    z-index: 5
+  &__contain
+    display: flex
+    margin-top: 56px
+    margin-left: -85px
+    +respond-to(lg)
+      margin-left: -40px
+  &_col
+    width: 50%
+    padding-left: 85px
+    +respond-to(lg)
+      padding-left: 40px
+    &:first-child
+      .location__sp
+        max-width: 455px
+  &__sp-info
+    margin-left: 20px
+    +respond-to(lg)
+      margin-left: 0
+      text-align: center
+  &__sp-block
+    display: flex
+    align-items: flex-start
+    +respond-to(lg)
+      flex-direction: column
+      align-items: center
+      height: 145px
+      &:not(:last-child)
+        margin-bottom: 35px
+  &__sp-txt
+    color: #fff
+    font-size: 18px
+    font-weight: 300
+    line-height: 30px
+    letter-spacing: 0.29px
+    margin-top: 10px
+    font-family: 'PFDinTextCondPro-Regular', Helvetica, Arial, sans-serif
+  &__sp-icon
+    display: inline-block
+    +respond-to(lg)
+      margin-bottom: 15px
+    &.location__sp-icon--map
+      background-image: url("../images/svg-icons/map.svg")
+      width: 22px
+      height: 26px
+    &.location__sp-icon--car
+      background-image: url("../images/svg-icons/car.svg")
+      width: 31px
+      height: 22px
+    &.location__sp-icon--man
+      background-image: url("../images/svg-icons/man.svg")
+      width: 17px
+      height: 28px
+    &.location__sp-icon--zug
+      background-image: url("../images/svg-icons/zug.svg")
+      width: 20px
+      height: 26px
+  &__title
+    text-align: center
+    color: #fff
+    font-size: 25px
+    font-weight: 400
+    letter-spacing: 0.89px
+    font-family: 'PFDinTextCondPro-Regular', Helvetica, Arial, sans-serif
+    +respond-to(lg)
+      height: 24px
+    +respond-to(md)
+      font-size: 20px
+  &__sp-spent
+    color: #fff
+    font-size: 40px
+    font-weight: 400
+    letter-spacing: 1.9px
+    line-height: 30px
+  &__sp
+    margin-top: 90px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    +respond-to(lg)
+      flex-direction: column

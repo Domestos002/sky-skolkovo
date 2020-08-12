@@ -1,0 +1,115 @@
+.page-hero__title, .page-hero__info
+  width: 50%
+  +respond-to(dk)
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    max-width: 775px
+
+.page-hero__bg-video, .page-hero__video
+  position: absolute
+  right: 0
+  bottom: 0
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+
+
+.page-hero
+  width: 100%
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  z-index: 0
+  position: relative
+  &__choice-btn
+    margin-top: auto
+  +min-respond-to(dk)
+    min-height: 100vh
+  +respond-to(md)
+    background-image: url("../images/hero-bg.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    -webkit-background-size: cover
+    background-size: cover
+  &__bg-video
+    +respond-to(md)
+      display: none
+  &__inner
+    position: relative
+    z-index: 25
+    padding-top: 250px
+    display: flex
+    padding-bottom: 100px
+    flex-wrap: wrap
+    +respond-to(dk)
+      padding-top: 200px
+  &__info-inner
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  &__subtitle
+    font-size: 20px
+    color: #fff
+    font-weight: 400
+    margin-top: 25px
+    font-family: 'PFDinTextCondPro-Regular', Helvetica, Arial, sans-serif
+  &__info-block
+    text-align: left
+    &:not(:first-child)
+      margin-top: 45px
+      +respond-to(lg)
+        margin-top: 30px
+  &__info-subtitle
+    font-size: 17px
+    font-weight: 400
+    color: #fff
+    letter-spacing: 0.81px
+    margin-top: 7px
+    font-family: 'PFDinTextCondPro-Regular', Helvetica, Arial, sans-serif
+  &__info-title
+    color: #fff
+    font-size: 40px
+    text-transform: uppercase
+    font-weight: 400
+    line-height: 1.2em
+    letter-spacing: 1.11px
+    +respond-to(dk)
+      font-size: 32px
+      letter-spacing: 0.89px
+  &__info
+    display: flex
+    justify-content: flex-end
+    +respond-to(dk)
+      margin-top: 40px
+      justify-content: flex-start
+  &__info-btns
+    margin-top: 30px
+    .btn
+      &:not(:last-child)
+        margin-right: 10px
+
+  &__title
+    display: flex
+    flex-direction: column
+  &__choice-btn
+    .btn
+      width: 250px
+      margin-top: auto
+    +respond-to(dk)
+      position: absolute
+      width: 100%
+      text-align: center
+      bottom: 20px
+      left: 0
+
+  &__video-overlay
+    z-index: 1
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)

@@ -1,0 +1,176 @@
+.header-panel-mobile__callback-btn
+  margin-left: 30px
+  +respond-to(md)
+    display: none
+
+.header-panel-mobile
+  height: 80px
+  padding: 20px 0
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  box-shadow: 0 2px 4px rgba(23, 152, 195, 0.2)
+  background-color: #ffffff
+  display: none
+  z-index: 210
+  position: fixed
+  width: 100%
+  width: 100vw
+  &.absolute
+    position: absolute
+    top: 0
+  &.active
+    .burger__span
+      display: none
+    .burger
+      width: 80px
+      height: 80px
+      position: absolute
+      right: 0
+      top: 0
+      background-repeat: no-repeat
+      background-position: center
+      background-image: url(../images/close.png)
+      -webkit-background-size: cover
+      background-size: cover
+      +respond-to(md)
+        width: 60px
+        height: 60px
+  top: 0
+  +respond-to(dk)
+    display: block
+    justify-content: space-between
+  +respond-to(md)
+    height: 60px
+
+.header-panel-mobile__contain
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.header-navbar
+  width: 100%
+  position: absolute
+  z-index: 20
+  top: 0
+  &__nav
+    z-index: 199
+    +respond-to(dk)
+      padding-left: 40px
+      padding-right: 40px
+      display: none
+      position: fixed
+      top: 60px
+      right: 0
+      bottom: 0
+      left: 0
+      background-color: #fff
+      .header-navbar__list
+        display: block
+  &__list
+    display: flex
+    align-items: flex-start
+    list-style: none
+    justify-content: space-between
+  &__col
+    width: calc(50% - 75px)
+    display: flex
+    justify-content: space-between
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    +min-respond-to(dk)
+      &.header-navbar__col--first
+        padding-right: 35px
+      &.header-navbar__col--last
+        padding-left: 35px
+    +respond-to(dk)
+      width: 100%
+      display: flex
+      flex-direction: column
+      padding-left: 0
+  &__item
+    flex-grow: 1
+  &-inner-rel
+    position: relative
+    width: 100%
+  &__callback
+    position: absolute
+    top: 45px
+    right: 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    .btn
+      margin-top: 25px
+  &__link
+    @extend %font-base-thin
+    font-size: 18px
+    font-weight: 300
+    text-transform: uppercase
+    text-decoration: none
+    color: #fff
+    padding-top: 45px
+    letter-spacing: 1.06px
+    +respond-to(dk)
+      color: $text-primary
+  &__phone-callback
+    @extend %font-second
+    font-size: 20px
+    font-weight: 400
+    color: #fff
+    letter-spacing: 1px
+    margin-bottom: 20px
+    font-style: initial
+    text-align: right
+  &__abs-callback
+    position: absolute
+    top: 45px
+    right: 40px
+    display: flex
+    flex-direction: column
+    @media only screen and (max-width: 1600px)
+      display: none
+  &-label
+    display: flex
+    flex-shrink: 0
+    padding-top: 40px
+    justify-content: center
+    width: 150px
+    height: 193px
+    background-image: linear-gradient(to top, rgba(80, 75, 149, 0.7) 0%, $brand 100%)
+    &.header-navbar-label--mobile
+      display: none
+      width: 113px
+      height: 113px
+      padding-top: 0
+      align-items: center
+      position: absolute
+      top: 80px
+      left: 50%
+      transform: translateX(-50%)
+      +respond-to(md)
+        top: 60px
+      .logo.header-navbar__logo
+        width: 60px
+        height: 69px
+      +respond-to(dk)
+        display: flex
+    +respond-to(dk)
+      display: none
+
+@media (max-width: 768px) and (orientation: landscape)
+  .header-navbar__col
+    width: 50% !important
+  .header-navbar__link
+    padding-top: 20px
+  .header-navbar__list
+    display: flex !important
+
+
+.phone-callback.header-navbar__phone-callback
+  font-family: Oswald, sans-serif
+  font-size: 20px
+  font-weight: 400
+  letter-spacing: 1px
+  color: #fff

@@ -1,0 +1,17 @@
+.burger
+  width: 30px
+  height: 20px
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  align-items: flex-end
+  &__stripe
+    height: 3px
+    display: block
+    width: 100%
+    background-color: $brand
+    &:last-child
+      width: 20px
+
+.header-panel-mobile.active .burger__stripe:nth-child(2)
+  display: none
